@@ -13,3 +13,13 @@ export {
 } from "./mina";
 export { fee } from "./fee";
 export { MinaNetworkURL, Berkeley, Lightnet, TestWorld2 } from "./networks";
+export {
+  TxnPayload,
+  IsError,
+  SerializedTxn,
+  SignedSerializedTxn,
+  TxnResult,
+  JobPayload,
+  JobResult,
+  zkCloudWorkerAPI,
+} from "./api/client-api";

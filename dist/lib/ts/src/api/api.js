@@ -76,6 +76,32 @@ class zkCloudWorker {
             };
     }
     /**
+     * Gets the result of the job using serverless api call
+     * @param data the data for the jobResult call
+     * @param data.jobId the jobId of the job
+     * @returns { success: boolean, error?: string, result?: any }
+     * where result is the result of the job
+     * if the job is not finished yet, the result will be undefined
+     * if the job failed, the result will be undefined and error will be set
+     * if the job is finished, the result will be set and error will be undefined
+     * if the job is not found, the result will be undefined and error will be set
+     */
+    async deploy(data) {
+        const result = await this.apiHub("deploy", data);
+        if (this.isError(result.data))
+            return {
+                success: false,
+                error: result.error,
+                result: result.data,
+            };
+        else
+            return {
+                success: result.success,
+                error: result.error,
+                result: result.data,
+            };
+    }
+    /**
      * Gets the billing report for the jobs sent using JWT
      * @returns { success: boolean, error?: string, result?: any }
      * where result is the billing report

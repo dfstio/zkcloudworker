@@ -7,4 +7,10 @@ export abstract class Cloud {
   }
   abstract getDeployer(): Promise<PrivateKey>;
   abstract log(msg: string): void;
+  /* TODO: add more methods 
+      -getDataByKey
+      -saveDataByKey
+      -saveFile
+      -loadFile 
+  */
 }
