@@ -1,0 +1,46 @@
+{
+  "name": "zkcloudworker",
+  "version": "0.1.0",
+  "description": "zkCloudWorkerlibrary",
+  "author": "dfst.io",
+  "license": "Apache-2.0",
+  "homepage": "https://docs.zkcloudworker.com",
+  "bugs": {
+    "url": "https://github.com/dfstio/zkcloudworker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfstio/zkcloudworker.git"
+  },
+  "main": "lib/web/src/index.js",
+  "exports": {
+    "types": "./lib/ts/src/index.d.ts",
+    "browser": "./lib/web/src/index.js",
+    "node": {
+      "import": "./lib/ts/src/index.js",
+      "require": "./lib/ts/src/index.js"
+    },
+    "default": "./lib/ts/src/index.js"
+  },
+  "types": "lib/web/src/index.d.ts",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.4.0"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "mina-protocol",
+    "zkcloudworker",
+    "cloudworker",
+    "cloud",
+    "proving"
+  ],
+  "peerDependencies": {
+    "o1js": "^0.16.0"
+  }
+}
