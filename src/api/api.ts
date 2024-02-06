@@ -93,8 +93,8 @@ export class zkCloudWorker {
 
   /**
    * Gets the result of the job using serverless api call
-   * @param data the data for the jobResult call
-   * @param data.jobId the jobId of the job
+   * @param data the data for the deploy call
+   * @param data.packageName the name of the zip file with the code to be deployed
    * @returns { success: boolean, error?: string, result?: any }
    * where result is the result of the job
    * if the job is not finished yet, the result will be undefined
@@ -105,21 +105,19 @@ export class zkCloudWorker {
   public async deploy(data: { packageName: string }): Promise<{
     success: boolean;
     error?: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    result?: any;
+    jobId?: string;
   }> {
     const result = await this.apiHub("deploy", data);
-    if (this.isError(result.data))
+    if (result.data === "error")
       return {
         success: false,
         error: result.error,
-        result: result.data,
       };
     else
       return {
         success: result.success,
+        jobId: result.data,
         error: result.error,
-        result: result.data,
       };
   }
 
