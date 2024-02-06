@@ -55,8 +55,8 @@ export declare class zkCloudWorker {
     }>;
     /**
      * Gets the result of the job using serverless api call
-     * @param data the data for the jobResult call
-     * @param data.jobId the jobId of the job
+     * @param data the data for the deploy call
+     * @param data.packageName the name of the zip file with the code to be deployed
      * @returns { success: boolean, error?: string, result?: any }
      * where result is the result of the job
      * if the job is not finished yet, the result will be undefined
@@ -69,7 +69,7 @@ export declare class zkCloudWorker {
     }): Promise<{
         success: boolean;
         error?: string;
-        result?: any;
+        jobId?: string;
     }>;
     /**
      * Gets the billing report for the jobs sent using JWT
