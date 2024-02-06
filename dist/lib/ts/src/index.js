@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TestWorld2 = exports.Lightnet = exports.Berkeley = exports.fee = exports.formatTime = exports.accountBalanceMina = exports.accountBalance = exports.sleep = exports.makeString = exports.Memory = exports.initBlockchain = exports.Cloud = exports.zkCloudWorker = void 0;
+exports.zkCloudWorkerAPI = exports.TestWorld2 = exports.Lightnet = exports.Berkeley = exports.fee = exports.formatTime = exports.accountBalanceMina = exports.accountBalance = exports.sleep = exports.makeString = exports.Memory = exports.initBlockchain = exports.Cloud = exports.zkCloudWorker = void 0;
 var api_1 = require("./api/api");
 Object.defineProperty(exports, "zkCloudWorker", { enumerable: true, get: function () { return api_1.zkCloudWorker; } });
 var cloud_1 = require("./cloud/cloud");
@@ -19,3 +19,5 @@ var networks_1 = require("./networks");
 Object.defineProperty(exports, "Berkeley", { enumerable: true, get: function () { return networks_1.Berkeley; } });
 Object.defineProperty(exports, "Lightnet", { enumerable: true, get: function () { return networks_1.Lightnet; } });
 Object.defineProperty(exports, "TestWorld2", { enumerable: true, get: function () { return networks_1.TestWorld2; } });
+var client_api_1 = require("./api/client-api");
+Object.defineProperty(exports, "zkCloudWorkerAPI", { enumerable: true, get: function () { return client_api_1.zkCloudWorkerAPI; } });
