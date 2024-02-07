@@ -11,7 +11,7 @@ function initBlockchain(instance) {
     }
     else if (instance === "berkeley") {
         const network = o1js_1.Mina.Network({
-            mina: networks_1.Berkeley.graphql,
+            mina: networks_1.Berkeley.mina,
             archive: networks_1.Berkeley.archive,
         });
         o1js_1.Mina.setActiveInstance(network);
@@ -19,7 +19,7 @@ function initBlockchain(instance) {
     }
     else if (instance === "testworld2") {
         const network = o1js_1.Mina.Network({
-            mina: networks_1.TestWorld2.graphql,
+            mina: networks_1.TestWorld2.mina,
             archive: networks_1.TestWorld2.archive,
         });
         o1js_1.Mina.setActiveInstance(network);
@@ -27,7 +27,7 @@ function initBlockchain(instance) {
     }
     else if (instance === "lighnet") {
         const network = o1js_1.Mina.Network({
-            mina: networks_1.Lightnet.graphql,
+            mina: networks_1.Lightnet.mina,
             archive: networks_1.Lightnet.archive,
             lightnetAccountManager: networks_1.Lightnet.accountManager,
         });

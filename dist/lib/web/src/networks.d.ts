@@ -1,7 +1,7 @@
 export { MinaNetworkURL, Berkeley, Lightnet, TestWorld2 };
 interface MinaNetworkURL {
-    graphql: string;
-    archive: string;
+    mina: string[];
+    archive: string[];
     chainId?: string;
     name?: string;
     accountManager?: string;

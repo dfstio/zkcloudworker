@@ -35,21 +35,21 @@ function initBlockchain(instance: blockchain): MinaNetwork {
     return { keys: Local.testAccounts };
   } else if (instance === "berkeley") {
     const network = Mina.Network({
-      mina: Berkeley.graphql,
+      mina: Berkeley.mina,
       archive: Berkeley.archive,
     });
     Mina.setActiveInstance(network);
     return { keys: [], url: Berkeley };
   } else if (instance === "testworld2") {
     const network = Mina.Network({
-      mina: TestWorld2.graphql,
+      mina: TestWorld2.mina,
       archive: TestWorld2.archive,
     });
     Mina.setActiveInstance(network);
     return { keys: [], url: TestWorld2 };
   } else if (instance === "lighnet") {
     const network = Mina.Network({
-      mina: Lightnet.graphql,
+      mina: Lightnet.mina,
       archive: Lightnet.archive,
       lightnetAccountManager: Lightnet.accountManager,
     });
